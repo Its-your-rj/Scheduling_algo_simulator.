@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Scheduling Algorithms</h1>
+    </header>
+    <main>
+        <section id="inputs">
+            <h2>Input Process Details</h2>
+            <form id="processForm">
+                <div>
+                    <label for="arrivalTime">Arrival Time:</label>
+                    <input type="number" id="arrivalTime" required>
+                </div>
+                <div>
+                    <label for="burstTime">Burst Time:</label>
+                    <input type="number" id="burstTime" required>
+                </div>
+                <button type="button" id="addProcess">Add Process</button>
+            </form>
+            <button id="calculate">Calculate</button>
+        </section>
+
+        <section id="algorithms">
+            <h2>Select Algorithm</h2>
+            <select id="algorithm">
+                <option value="fcfs">First Come First Serve (FCFS)</option>
+                <option value="srtf">Shortest Remaining Time First (SRTF)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="rr">Round Robin (RR)</option>
+            </select>
+            <div id="timeQuantumSection">
+                <label for="timeQuantum">Time Quantum:</label>
+                <input type="number" id="timeQuantum" min="1">
+            </div>
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Process</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                        <th>Completion Time</th>
+                        <th>Turnaround Time</th>
+                        <th>Waiting Time</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTable">
+                </tbody>
+            </table>
+            <div id="averages">
+                <p id="avgWaitingTime">Average Waiting Time: </p>
+                <p id="avgTurnaroundTime">Average Turnaround Time: </p>
+            </div>
+        </section>
+
+        <section id="ganttChart">
+            <h2>Gantt Chart</h2>
+            <div id="chart"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Scheduling Algorithm Simulator</p>
+    </footer>
+</body>
+</html>
