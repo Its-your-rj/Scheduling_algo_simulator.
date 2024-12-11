@@ -7,7 +7,7 @@
 4. [Technologies Used](#technologies-used)
 5. [How to Use](#how-to-use)
 6. [File Structure](#file-structure)
-7. [License](#license)
+
 
 ---
 
